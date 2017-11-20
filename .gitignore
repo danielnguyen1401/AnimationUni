@@ -1,9 +1,8 @@
 
-Library/*
-library/*
-Temp/*
-Obj/*
-obj/*
+Library/
+Temp/
+Obj/
+obj/
 Build/
 Builds/
 Assets/AssetStoreTools*

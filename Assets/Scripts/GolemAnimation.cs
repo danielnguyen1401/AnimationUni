@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class GolemAnimation : MonoBehaviour
 {
     private Animator anim;
     private string SLEEP_END_ANIMATION = "sleep_end";
     private string IDLE_ANIMATION = "idle";
+    private string WALK_PARAMETER = "Walk";
 
     void Awake()
     {
@@ -13,6 +15,11 @@ public class GolemAnimation : MonoBehaviour
 
     void Update()
     {
+    }
+
+    public void PlayWalk(bool walk)
+    {
+        anim.SetBool(WALK_PARAMETER, walk);
     }
 
     public void EndSleep()

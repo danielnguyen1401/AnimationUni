@@ -9,6 +9,8 @@ public class GolemAnimation : MonoBehaviour
     private string WALK_PARAMETER = "Walk";
     private string ATTACK_1_PARAMETER = "Atk1";
     private string ATTACK_2_PARAMETER = "Atk2";
+    private string JUMP_PARAMETER = "Jump";
+
 
     void Awake()
     {
@@ -17,6 +19,11 @@ public class GolemAnimation : MonoBehaviour
 
     void Update()
     {
+    }
+
+    public void PlayJump(bool jump)
+    {
+        anim.SetBool(JUMP_PARAMETER, jump);
     }
 
     public void Attack1()

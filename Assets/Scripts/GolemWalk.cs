@@ -16,6 +16,7 @@ public class GolemWalk : MonoBehaviour
     {
         CheckMovement();
         AnimatePlayer();
+        CheckForAttack();
     }
 
     void CheckMovement()
@@ -25,6 +26,18 @@ public class GolemWalk : MonoBehaviour
 
         rotateY -= h * rotationSpeed;
         transform.localRotation = Quaternion.AngleAxis(rotateY, Vector3.up);
+    }
+
+    void CheckForAttack()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            playerAnim.Attack1();
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            playerAnim.Attack2();
+        }
     }
 
     void AnimatePlayer()
